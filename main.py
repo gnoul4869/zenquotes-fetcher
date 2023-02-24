@@ -3,8 +3,8 @@ import json
 import requests
 from time import sleep
 
-MAX_TRIES = 20
-DELAY = 60 * 5
+MAX_TRIES = 20  # Maximum number of times to fetch the quotes
+DELAY = 60 * 5  # Seconds
 
 
 def get_new_quotes():
