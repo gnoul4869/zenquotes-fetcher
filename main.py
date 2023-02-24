@@ -3,16 +3,15 @@ import json
 import requests
 from time import sleep
 
+ZENQUOTES_URL = "https://zenquotes.io/api/quotes/"
 MAX_TRIES = 20  # Maximum number of times to fetch the quotes
 DELAY = 60 * 5  # Seconds
 
 
 def get_new_quotes():
-    url = "https://zenquotes.io/api/quotes/"
-
     print("Getting new quotes...")
 
-    raw_quotes = requests.get(url).json()
+    raw_quotes = requests.get(ZENQUOTES_URL).json()
 
     quotes = [
         {
