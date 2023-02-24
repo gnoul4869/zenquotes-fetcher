@@ -4,8 +4,8 @@ import requests
 from time import sleep
 
 ZENQUOTES_URL = "https://zenquotes.io/api/quotes/"
-MAX_TRIES = 20  # Maximum number of times to fetch the quotes
-DELAY = 60 * 5  # Seconds
+MAX_TRIES = 50  # Maximum number of times to fetch the quotes
+DELAY = 60 * 2  # Seconds
 
 
 def get_new_quotes():
