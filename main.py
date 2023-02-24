@@ -9,6 +9,13 @@ DELAY = 60 * 5  # Seconds
 
 
 def get_new_quotes():
+    """
+    Get new quotes from Zenquotes API
+
+    Returns:
+        list: List of new quotes
+    """
+
     print("Getting new quotes...")
 
     raw_quotes = requests.get(ZENQUOTES_URL).json()
@@ -27,6 +34,13 @@ def get_new_quotes():
 
 
 def load_quotes():
+    """
+    Load saved quotes from file
+
+    Returns:
+        list: List of saved quotes
+    """
+
     print("Loading quotes...")
 
     with open("quotes.json", "r") as f:
@@ -38,6 +52,8 @@ def load_quotes():
 
 
 def update_quotes():
+    "Update saved quotes from file with new quotes from Zenquotes API"
+
     new_quotes = get_new_quotes()
     quotes = load_quotes()
 
