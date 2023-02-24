@@ -62,7 +62,7 @@ if __name__ == "__main__":
     i = 0
     while i < MAX_TRIES:
         i += 1
-        print(f"{i:-^50}")
+        print(f"{f' {i} ':-^50}")
 
         update_quotes()
 
