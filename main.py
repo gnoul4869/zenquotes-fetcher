@@ -43,12 +43,17 @@ def load_quotes():
 
     print("Loading quotes...")
 
-    with open("quotes.json", "r") as f:
-        quotes = json.load(f)
+    try:
+        with open("quotes.json", "r") as f:
+            quotes = json.load(f)
 
-    print(f"Loaded {len(quotes)} quotes.")
+        print(f"Loaded {len(quotes)} quotes")
 
-    return quotes
+        return quotes
+    except FileNotFoundError:
+        print("File not found. Loaded 0 quotes")
+
+        return []
 
 
 def update_quotes():
